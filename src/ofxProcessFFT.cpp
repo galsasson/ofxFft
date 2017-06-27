@@ -89,7 +89,7 @@ void ProcessFFT::calculateFFT(vector<float>&buffer, float _FFTpercentage, int _n
     
     graphMaxSound.push_back(maxSound); //accumulate loudest sounds
     
-    float accumMaxSounds;
+    float accumMaxSounds=0;
     for (int i =0; i<graphMaxSound.size(); i++) {
         accumMaxSounds = accumMaxSounds+graphMaxSound[i]; //add up all loudest sounds
     }
@@ -208,7 +208,7 @@ void ProcessFFT::drawAvgGraph(ofPoint pt, vector<float> values, ofColor _color){
         ofTranslate(pt.x, pt.y);
         ofBeginShape();
     
-        float avgVal;
+        float avgVal=0;
         for (int i = 0; i < (int)ofMap(values.size(), 0 , values.size(), 0,200); i++){ //scale it to be 200px wide
             if( i == 0 ) ofVertex(i, 200);
             
@@ -234,7 +234,7 @@ void ProcessFFT::drawAvgGraph(ofPoint pt, vector<float> values, ofColor _color){
         ofTranslate(pt.x, pt.y);
         ofBeginShape();
         
-        float avgVal;
+        float avgVal=0;
         for (int i = 0; i < (int)ofMap(values.size(), 0 , values.size(), 0,200); i++){ //scale it to be 200px wide
             if( i == 0 ) ofVertex(i, 200);
             

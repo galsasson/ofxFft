@@ -96,7 +96,7 @@ protected:
 	void clearUpdates();
 
 	inline float cartesianToAmplitude(float x, float y) {
-		return sqrtf(x * x + y * y);
+		return sqrtf(x*x + y*y);
 	}
 
 	inline float cartesianToPhase(float x, float y) {
